@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+<html>
+<head runat="server">
+    <title></title>
+    <link rel="stylesheet" href="css/cssslider_files/csss_engine1/style.css">
+		<!--[if IE]><link rel="stylesheet" href="cssslider_files/csss_engine1/ie.css"><![endif]-->
+		
+    <!--css-->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" href="css/w3.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/ken-burns.css" type="text/css" media="all" />
+<link rel="stylesheet" href="css/animate.min.css" type="text/css" media="all" />
+<!--css-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div>
+    <!--header-->
+		    <div class="header">
+			<div class="header-top">
+				<div class="container">
+					<div class="navbar-brand">
+								<h1><a href="home.aspx">Study World <span style="margin-left: 4px">School</span></a></h1>
+							</div>
+					<div class="indicate">
+						<p><a href="prospectus.aspx">Prospect Us</a> | <a href="download.aspx">Download</a> | <a href="Admin/admin_login.aspx">Admin</a> | <a href="contactus.aspx">Contact Us</a></p>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="container">
+                <nav class="navbar navbar-default"  style="padding-top:0px;padding-bottom:0px">
+                            
+					<div class="container-fluid">
+				<!---Brand and toggle get grouped for better mobile display--->
+						<div class="navbar-header">
+							
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+								<span class="sr-only">Toggle navigation</span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+								<span class="icon-bar"></span>
+							</button>				  
+							
+						</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+							<nav class="link-effect-2" id="link-effect-2">
+								<ul class="nav navbar-nav">
+									<li><a href="home.aspx"><span data-hover="Home">Home</span></a></li>
+									<li><a href="aboutus.aspx"><span data-hover="About Us">About Us</span></a></li>
+									<li><a href="admission.aspx"><span data-hover="Admission">Admission</span></a></li>
+                                    <li><a href="facilities.aspx"><span data-hover="Facilities">Facilities</span></a></li>
+									<li><a href="message.aspx"><span data-hover="Message">Message</span></a></li>	
+									<li><a href="achievement.aspx"><span data-hover="Achievement">Achievement</span></a></li>
+									<li><a href="staff.aspx"><span data-hover="Staff">Staff</span></a></li>
+									<li><a href="gallery.aspx"><span data-hover="Gallery">Gallery</span></a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</nav>
+			</div>
+            </div>
+    <!--header-->
+           <!-- Start cssSlider.com -->
+		<!--[if lte IE 9]><script type="text/javascript" src="cssslider_files/csss_engine1/ie.js"></script><![endif]-->
+		<script type="text/javascript" src="css/cssslider_files/csss_engine1/gestures.js"></script>
+		<div class='csslider1 autoplay '>
+		<input name="cs_anchor1" id='cs_slide1_0' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_1' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_2' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_3' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_4' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_5' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_6' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_slide1_7' type="radio" class='cs_anchor slide' >
+		<input name="cs_anchor1" id='cs_play1' type="radio" class='cs_anchor' checked>
+		<input name="cs_anchor1" id='cs_pause1_0' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_1' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_2' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_3' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_4' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_5' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_6' type="radio" class='cs_anchor pause'>
+		<input name="cs_anchor1" id='cs_pause1_7' type="radio" class='cs_anchor pause'>
+		<ul>
+        <li class="cs_skeleton"><img src="images/slider/1.jpg" style="width: 100%;" alt=""/></li>
+			
+                         <asp:Repeater ID="repeater_slider" runat="server">
+                         <ItemTemplate>
+                                    <li class='num<%#Eval("s_no") %> img slide'> <img src='<%#Eval("url") %>' alt='<%#Eval("date_time") %>'/></li>
+			             </ItemTemplate>
+                         </asp:Repeater>
+			</ul>
+		</div>
+		<!-- End cssSlider.com -->
+		<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+            </asp:ContentPlaceHolder>
+    <!--footer-->
+			<div class="footer-w3">
+				<div class="container">
+					<div class="footer-grids">
+						<div class="col-md-4 footer-grid">
+							<h4>About Us</h4>
+							<p style="text-align: justify">
+                                <asp:Label ID="lblaboutusmain" runat="server" Text="Joyful learning to develop creative, innovative, responsible, positive and sensitive, leaders for a better world."></asp:Label>
+                            </p>
+						</div>
+						<div class="col-md-4 footer-grid">
+						<h4>Recent Posts</h4>
+                            <asp:Repeater ID="repeaterimg" runat="server">
+                            <ItemTemplate>
+                            <div class="footer-grid1">
+                                <a href='image.aspx?id=<%#Eval("id") %>'><asp:Image ID="imgftr" runat="server" ImageUrl='<%#Eval("imgurl") %>' class="img-responsive"/></a>
+							</div>
+                            </ItemTemplate>
+                            </asp:Repeater>
+                            <div class="clearfix"> </div>
+						</div>
+						<div class="col-md-4 footer-grid">
+						<h4>Contact Us</h4>
+							<ul>
+								<li><asp:Label ID="lblftraddress" runat="server" Text="Gomti Nagar, Lucknow 226010"></asp:Label></li>
+								<li><asp:Label ID="lblftrmobile" runat="server" Text="+91 9044443341"></asp:Label></li>
+								<li><asp:HyperLink ID="linkftremail" runat="server"><asp:Label ID="lblftremail" runat="server" Text="studyworldschool@mail.co"></asp:Label></asp:HyperLink></li>
+								<li><asp:Label ID="lblftrtime" runat="server" Text="Mon-Sat 09:00 am to 16:00 pm"></asp:Label></li>
+							</ul>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+	<!--footer-->
+	<!---copy--->
+			<div class="copy-section">
+				<div class="container" style="margin:2px;padding-top:0px;">
+					<div class="copy">
+						<p>&copy; 2016  Study World School | Design by Aman</p>
+					</div>
+                    <div class="social-icons">
+						<a href="#"><i class="icon1"></i></a>
+						<a href="#"><i class="icon2"></i></a>
+						<a href="#"><i class="icon3"></i></a>
+						<a href="#"><i class="icon4"></i></a>
+					</div>
+				</div>
+			</div>
+    <!---copy--->
+
+    </div>
+    </form>
+</body>
+</html>
